@@ -938,7 +938,7 @@ section,
   justify-content: center;
 }
 
-.hero img {
+.hero > img {
   position: absolute;
   inset: 0;
   display: block;
@@ -959,18 +959,42 @@ section,
 .hero .container {
   position: relative;
   z-index: 3;
+  text-align: center;
 }
 
 .hero h2 {
-  margin: 0;
+  margin: 0 0 -10px 0;
   font-size: 48px;
   font-weight: 700;
   text-transform: uppercase;
 }
 
+.hero .hero-logo {
+  position: relative;
+  display: block;
+  max-width: 400px;
+  width: 100%;
+  height: auto;
+  margin: 0 auto !important;
+  filter: drop-shadow(0 0 20px rgba(255, 255, 255, 0.4));
+  transition: transform 0.3s ease;
+  z-index: 4;
+}
+
+.hero .hero-logo:hover {
+  transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+  .hero .hero-logo {
+    max-width: 250px;
+    margin: 0 auto !important;
+  }
+}
+
 .hero p {
   color: color-mix(in srgb, var(--default-color), transparent 20%);
-  margin: 10px 0 0 0;
+  margin: -10px 0 0 0;
   font-size: 24px;
 }
 
