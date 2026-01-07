@@ -12,9 +12,9 @@
 --------------------------------------------------------------*/
 /* Fonts */
 :root {
-  --default-font: "Roboto", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  --heading-font: "Raleway", sans-serif;
-  --nav-font: "Inter", sans-serif;
+  --default-font: "Noto Sans Tamil", "Mukta Malar", "Roboto", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --heading-font: "Noto Sans Tamil", "Mukta Malar", "Raleway", sans-serif;
+  --nav-font: "Noto Sans Tamil", "Mukta Malar", "Inter", sans-serif;
 }
 
 /* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
@@ -75,13 +75,7 @@
 body {
   color: var(--default-color);
   background-color: var(--background-color);
-  /* font-family: var(--default-font); */
-  font-family:
-    'Noto Sans Tamil',
-    'Latha',
-    'Vijaya',
-    'Kalimati',
-    sans-serif;
+  font-family: var(--default-font);
 }
 
 a {
@@ -885,7 +879,7 @@ section,
 # Global Section Titles
 --------------------------------------------------------------*/
 .section-title {
-  padding-bottom: 60px;
+  padding-bottom: 40px;
   position: relative;
 }
 
@@ -938,7 +932,7 @@ section,
   justify-content: center;
 }
 
-.hero > img {
+.hero>img {
   position: absolute;
   inset: 0;
   display: block;
@@ -1371,7 +1365,7 @@ section,
 
 .testimonials:before {
   content: "";
-  background: color-mix(in srgb, var(--background-color), transparent 30%);
+  background: color-mix(in srgb, var(--background-color), transparent 50%);
   position: absolute;
   inset: 0;
   z-index: 2;
@@ -1403,6 +1397,8 @@ section,
 
 .testimonials .testimonial-item .testimonial-img {
   width: 100px;
+  height: 100px;
+  object-fit: cover;
   border-radius: 50%;
   border: 6px solid color-mix(in srgb, var(--default-color), transparent 85%);
   margin: 0 auto;
@@ -1604,6 +1600,18 @@ section,
 .team .member .pic {
   overflow: hidden;
   margin-bottom: 50px;
+  width: 100%;
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.team .member .pic img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
 }
 
 .team .member .member-info {
@@ -1883,6 +1891,4 @@ section,
 /*--------------------------------------------------------------
 # Starter Section Section
 --------------------------------------------------------------*/
-.starter-section {
-  /* Add your styles here */
-}
+/* Starter section styles can be added here when needed */
